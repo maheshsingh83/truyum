@@ -40,6 +40,7 @@ public class MenuItemDaoCollectionImplTest {
         }
 
     }
+
     public static void testModifyMenuItem() {
         System.out.println("Modify Menu Item\n");
         MenuItem menuitem = new MenuItem(1, "Eat and Enjoy", 12345.0f, true,

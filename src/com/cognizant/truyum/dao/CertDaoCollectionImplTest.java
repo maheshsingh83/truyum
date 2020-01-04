@@ -25,11 +25,11 @@ public class CertDaoCollectionImplTest {
     public static void testgetAllCartItems() {
         try {
             System.out.println("Retriving all the items from cart");
-            List<MenuItem> list = cartDao.getAllCartItems(1).getMenuItemList();//1 is userId
+            List<MenuItem> list = cartDao.getAllCartItems(2).getMenuItemList();// 1 is userId
             for (MenuItem menuItem : list) {
                 System.out.println(menuItem);
             }
-            System.out.println("Total Price: " + cartDao.getAllCartItems(1).getTotal());
+            System.out.println("Total Price: " + cartDao.getAllCartItems(2).getTotal());
         } catch (CartEmptyException e) {
             System.out.println(e);
         }
