@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<title>Edit menu</title>
@@ -9,7 +11,7 @@
       <header>
 			<h1>truYum</h1>
 			<img src="images\truyum-logo-light.png" alt="img" width="50" height="50"/>
-			<nav><a  class="menu" href="menu-item-list-admin.html">Menu</a></nav>
+			<nav><a  class="menu" href="ShowMenuItemListAdmin">Menu</a></nav>
 			
 	  </header>
 	  

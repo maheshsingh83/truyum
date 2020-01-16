@@ -1,10 +1,10 @@
-function validation(){
+function validationMenuItemForm(){
 
-	var title= document.forms["form"]["title"].value;
-	var price= document.forms["form"]["price"].value;
-	var dateoflaunch= document.forms["form"]["dateoflaunch"].value;
-	var category= document.forms["form"]["category"].value;
-	var regex =(/[^0-9]/);
+	var title= document.forms["menuItemForm"]["name"].value;
+	var price= document.forms["menuItemForm"]["price"].value;
+	var dateoflaunch= document.forms["menuItemForm"]["dateOfLaunch"].value;
+	var category= document.forms["menuItemForm"]["category"].value;
+	var regex =(/^.*[0-9].*$/);
 	
 	if(title ==""){
 		alert("Title is required");
@@ -18,7 +18,7 @@ function validation(){
 		alert("price is required");
 		return false;
 	}
-	if(price.match(regex)){
+	if(!price.match(regex)){
 		alert("Price has to be a number.");
 		return false ;
 	}
