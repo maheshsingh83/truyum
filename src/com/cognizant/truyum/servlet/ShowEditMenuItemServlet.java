@@ -13,15 +13,16 @@ import com.cognizant.truyum.model.MenuItem;
 
 @WebServlet("/ShowEditMenuItem")
 public class ShowEditMenuItemServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
- 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	    long menuItemId=Long.parseLong(request.getParameter("menuItemId"));
-	    MenuItemDao menuItemDao=new MenuItemDaoCollectionImpl();
-	    MenuItem menuItem=menuItemDao.getMenuItem(menuItemId);
-	    request.setAttribute("menuItem", menuItem);
-	    request.getRequestDispatcher("edit-menu-item.jsp").forward(request, response);
-	    
-	}
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        long menuItemId = Long.parseLong(request.getParameter("menuItemId"));
+        MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
+        MenuItem menuItem = menuItemDao.getMenuItem(menuItemId);
+        request.setAttribute("menuItem", menuItem);
+        request.getRequestDispatcher("edit-menu-item.jsp").forward(request, response);
+
+    }
 }

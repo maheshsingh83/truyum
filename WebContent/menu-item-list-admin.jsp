@@ -13,8 +13,8 @@
 	<header>
 	<h1>truYum</h1>
 	<img src="images\truyum-logo-light.png" alt="img" width="50"
-		height="50" /> <nav>
-	<a class="menu" href="ShowMenuItemListAdmin">Menu</a></nav> </header>
+		height="50" /> <nav> <a class="menu"
+		href="ShowMenuItemListAdmin">Menu</a></nav> </header>
 
 
 	<h2>Menu Items</h2>
@@ -34,7 +34,7 @@
 		<c:forEach items="${menuItem}" var="menuItem">
 			<tr>
 				<td class="title-name">${menuItem.getName()}</td>
-				<td class="title-price">${menuItem.getPrice()}</td>
+				<td class="title-price">Rs. ${menuItem.getPrice()}</td>
 				<td class="title-text"><c:choose>
 						<c:when test="${menuItem.isActive()==true}">Yes</c:when>
 						<c:otherwise>No</c:otherwise>
@@ -47,8 +47,7 @@
 						<c:otherwise>No</c:otherwise>
 					</c:choose></td>
 				<td class="title-text"><a
-					href="ShowEditMenuItem?menuItemId=${menuItem.getId()}"
-					>Edit</a></td>
+					href="ShowEditMenuItem?menuItemId=${menuItem.getId()}" id="link">Edit</a></td>
 			</tr>
 		</c:forEach>
 

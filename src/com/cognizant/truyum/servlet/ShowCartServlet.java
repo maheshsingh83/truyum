@@ -15,32 +15,30 @@ import com.cognizant.truyum.dao.CartEmptyException;
 import com.cognizant.truyum.model.Cart;
 import com.cognizant.truyum.model.MenuItem;
 
-
 @WebServlet("/ShowCart")
 public class ShowCartServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	    try {
-	    long userId=1L;
-	    CartDao cartDao =new CartDaoCollectionImpl();
-	    Cart cart=cartDao.getAllCartItems(userId);
-	    List<MenuItem>menuItemList=cart.getMenuItemList();
-	    double price=0.0;
-	    for (MenuItem menuItem : menuItemList) {
-	        price=price +menuItem.getPrice();
-	    }
-	    cart.setTotal(price);
-	    request.setAttribute("menuItem", menuItemList);
-	    request.setAttribute("cart", cart);
-	    request.getRequestDispatcher("cart.jsp").forward(request, response);
-	    }catch(CartEmptyException e) {
-	    request.getRequestDispatcher("cart-empty.jsp").forward(request, response);
-	 
-	    
-	}
-	}
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        try {
+            long userId = 1L;
+            CartDao cartDao = new CartDaoCollectionImpl();
+            Cart cart = cartDao.getAllCartItems(userId);
+            List<MenuItem> menuItemList = cart.getMenuItemList();
+            double price = 0.0;
+            for (MenuItem menuItem : menuItemList) {
+                price = price + menuItem.getPrice();
+            }
+            cart.setTotal(price);
+            request.setAttribute("menuItem", menuItemList);
+            request.setAttribute("cart", cart);
+            request.getRequestDispatcher("cart.jsp").forward(request, response);
+        } catch (CartEmptyException e) {
+            request.getRequestDispatcher("cart-empty.jsp").forward(request, response);
+
+        }
+    }
 
 }
