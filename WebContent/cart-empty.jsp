@@ -18,7 +18,7 @@
 	<h2>Cart</h2>
 	<p class="status">
 		No items in cart. Use 'Add to Cart' option in <a
-			href="ShowMenuItemListCoustomer" />Menu Item List.</a>
+			href="ShowMenuItemListCoustomer" >Menu Item List.</a>
 	</P>
 
 	<footer>
