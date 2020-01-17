@@ -37,9 +37,9 @@ public class EditMenuItemServlet extends HttpServlet {
         }
         // Check box
         if (isfreeDelivery == null) {
-            freeDelivery = true;
-        } else {
             freeDelivery = false;
+        } else {
+            freeDelivery = true;
         }
 
         MenuItem menuItem = new MenuItem(id, name, price, active,

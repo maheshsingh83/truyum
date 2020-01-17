@@ -19,9 +19,9 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
                     DateUtil.convertToDate("23/12/2017"), "Main Course", false);
             MenuItem item3 = new MenuItem(3, "Pizza", 149.00f, true,
                     DateUtil.convertToDate("21/08/2018"), "Main Course", false);
-            MenuItem item4 = new MenuItem(4, "French Freis", 57.00f, false,
+            MenuItem item4 = new MenuItem(4, "French Fries", 57.00f, false,
                     DateUtil.convertToDate("02/07/2017"), "Main Course", true);
-            MenuItem item5 = new MenuItem(4, "Sandwich", 32.00f, true,
+            MenuItem item5 = new MenuItem(5, "Choclate Browine", 32.00f, true,
                     DateUtil.convertToDate("02/11/2022"), "Dessert", true);
 
             menuItemList = new ArrayList<MenuItem>();

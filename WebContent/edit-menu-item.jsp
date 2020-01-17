@@ -58,12 +58,14 @@
 				<td><f:formatDate value="${menuItem.getDateOfLaunch()}"
 						pattern="dd/MM/yyyy" var="dateOfLaunch" /> <input type="text"
 					id="date" name="dateOfLaunch" value="${dateOfLaunch}" /></td>
-				<td><select name="category" id="catergory" />
+				<td><select name="category" id="catergory" >
 					<option value="${menuItem.getCategory()}">${menuItem.getCategory()}</option>
 					<option>Starters</option>
 					<option>Main Course</option>
 					<option>Dessert</option>
-					<option>Drinks</option></td>
+					<option>Drinks</option>
+					</select>
+					</td>
 			</tr>
 
 			<tr>
