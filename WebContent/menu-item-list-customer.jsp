@@ -39,12 +39,14 @@
 		<c:forEach items="${menuItem}" var="menuItem">
 			<tr>
 				<td class="title-name">${menuItem.getName()}</td>
+
 				<td class="title-text"><c:choose>
 						<c:when test="${menuItem.isFreeDelivery()==true}">Yes</c:when>
 						<c:otherwise>No</c:otherwise>
 					</c:choose></td>
 
 				<td class="title-text">Rs. ${menuItem.getPrice()}</td>
+
 				<td class="title-text">${menuItem.getCategory()}</td>
 
 				<td class="title-text"><a

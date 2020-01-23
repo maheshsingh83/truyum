@@ -43,7 +43,7 @@ public class EditMenuItemServlet extends HttpServlet {
         }
 
         MenuItem menuItem = new MenuItem(id, name, price, active,
-                DateUtil.convertToDate(dateOfLaunch), category, freeDelivery);
+                 DateUtil.convertToDate(dateOfLaunch), category, freeDelivery);
         MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
         menuItemDao.modifyMenuItem(menuItem);
         request.getRequestDispatcher("edit-menu-item-status.jsp").forward(request, response);
